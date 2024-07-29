@@ -5,18 +5,23 @@
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
-		}
+		},
+		"jsxPragma": null
 	},
 	"settings": {
 		"react": {
 			"version": "detect"
+		},
+		"import/resolver": {
+			"typescript": {}
 		}
 	},
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
+		"plugin:react/jsx-runtime"
 	],
 	"plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
 	"rules": {
@@ -27,9 +32,10 @@
 				"useTabs": true
 			}
 		],
-		"react/react-in-jsx-scope": "off",
+		"react/react-in-jsx-scope": 0,
 		"@typescript-eslint/no-unused-vars": "warn",
-		"@typescript-eslint/explicit-module-boundary-types": "off"
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"react/jsx-uses-react": 0
 	},
 	"ignorePatterns": ["node_modules/", "build/"]
 }
